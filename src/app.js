@@ -17,8 +17,8 @@ app.set('json spaces', 2);
 const logger = fs.createWriteStream(path.join(__dirname, "logs", "logger.log"), { flags: "a"});
 app.use(morgan("combined", { stream: logger }));
 
-app.listen(process.env.APP_PORT, () => {
-    console.log(`Application is running on ${process.env.APP_PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Application is running on ${process.env.PORT}`);
     app.use("/records", RecordRoutes);
 
     app.use((req, res, next) => { 
