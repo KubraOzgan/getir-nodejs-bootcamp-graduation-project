@@ -26,5 +26,5 @@ app.listen(process.env.APP_PORT, () => {
         error.status = 404;
         next(error); //Send this error to errorHandler
       });
-      app.use(errorHandler); 
+      app.use(errorHandler);
 });
